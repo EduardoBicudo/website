@@ -15,7 +15,7 @@ Além dessa página, há alguns recursos que são uteis quando portamos software
 Migrando Estratégia
 ================
 
-Hoje o Mono contem o núcleo de biblioteca de desenvolvimento  e ferramentas de implantação. A maioria dessas ferramentas são em linhas de comando e compilador, nao há uma substituição completa do Visual Studio para fazer aplicações do Windows.Forms e ASP.NET nativa no Linux.
+Hoje o Mono contem o núcleo de biblioteca de desenvolvimento  e ferramentas de implantação. A maioria dessas ferramentas são em linhas de comando e compiladore, nao há uma substituição completa do Visual Studio para fazer aplicações do Windows.Forms e ASP.NET nativa no Linux.
 
 Existe uma série de estratégias que você pode adotar dependendo o quão confortável você esteja com o uso do Linux.
 
