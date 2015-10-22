@@ -101,7 +101,7 @@ foreach (string pathdir in path_dirs)
 
 Diretrizes:
 
-1 - Em geral, eu iria tentar encapsular _all_ operações que operam em caminhos de arquivos. Maiúscula e minúscula, o PathSeparator,o DirectorySeparatorChar, etc, estão todas em questão. Mas sutilmente inclui oque é um caminho absoluto: /bin é absoluto no Linux mas precisa de um drive para fazer com que fique absoluto no Windows.
+1 - Em geral, eu iria tentar encapsular "all" operações que operam em caminhos de arquivos. Maiúscula e minúscula, o PathSeparator,o DirectorySeparatorChar, etc, estão todas em questão. Mas sutilmente inclui oque é um caminho absoluto: /bin é absoluto no Linux mas precisa de um drive para fazer com que fique absoluto no Windows.
 2 - Para classes que manipulam caminhos, são uteis para usar a injeção de dependência para a plataforma, ao invés de ter que detecta-los. Dessa maneira, você pode testar cada plataforma sob apenas uma.
 3 - Para alguns testes, você pode usar caminhos como /a/b/c que trabalham em ambas as plataformas, mas cuidado: Métodos como Path.GetAbsolutePath() irão ter comportamento diferente em cada plataforma.
 
