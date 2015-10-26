@@ -15,7 +15,7 @@ Além dessa página, há alguns recursos que são uteis quando portamos software
 Migrando Estratégia
 ================
 
-Hoje o Mono contem o núcleo de biblioteca de desenvolvimento  e ferramentas de implantação. A maioria dessas ferramentas são em linhas de comando e compilador, nao há uma substituição completa do Visual Studio para fazer aplicações do Windows.Forms e ASP.NET nativa no Linux.
+Hoje o Mono contem o núcleo de biblioteca de desenvolvimento  e ferramentas de implantação. A maioria dessas ferramentas são em linhas de comando e compiladore, nao há uma substituição completa do Visual Studio para fazer aplicações do Windows.Forms e ASP.NET nativa no Linux.
 
 Existe uma série de estratégias que você pode adotar dependendo o quão confortável você esteja com o uso do Linux.
 
@@ -61,7 +61,7 @@ Os sistemas Linux e Unix, tem diferenciação de maiúsculas e minúsculas
 
 No Linux e Unix os arquivos "readme" e "README" são dois arquivos diferentes, isso é Linux tem diferença entre maiúscula e minúsculas em seu sistema de arquivos.
 
-Isso é uma distinção importante paras muitas aplicações porque você pode ter criado uma pagina "Login.aspx",mas você a referencia como "login.aspx" ou "LOGIN.ASPX" no seu código fonte. Você precisa ter certeza que todas as referencias estão usando os nomes dos arquivos na mesma caixa.
+Isso é uma distinção importante paras muitas aplicações porque você pode ter criado uma pagina "Login.aspx", mas você a referencia como "login.aspx" ou "LOGIN.ASPX" no seu código fonte. Você precisa ter certeza que todas as referencias estão usando os nomes dos arquivos na mesma caixa.
 
 Alternativamente, iniciando com o mono 1.1.18,voce pode configurar a variável ambiente MONO_IOMAP para "case" ou  "all" para eliminar esses problemas. Veja [IOMap](/docs/advanced/iomap/) para mais detalhes.
 
@@ -101,9 +101,9 @@ foreach (string pathdir in path_dirs)
 
 Diretrizes:
 
-1 - Em geral, eu iria tentar encapsular _all_ operações que operam em caminhos de arquivos. Maiúscula e minúscula, o PathSeparator,o DirectorySeparatorChar, etc, estão todas em questão. Mas sutilmente inclui oque é um caminho absoluto: /bin é absoluto no Linux mas precisa de um drive para fazer com que fique absoluto no Windows.
-2 - Para classes que manipulam caminhos, são uteis para usar a injeção de dependência para a plataforma, ao invés de ter que detecta-los. Dessa maneira, você pode testar cada plataforma sob apenas uma.
-3 - Para alguns testes, você pode usar caminhos como /a/b/c que trabalham em ambas as plataformas, mas cuidado: Métodos como Path.GetAbsolutePath() irão ter comportamento diferente em cada plataforma.
+1. Em geral, eu iria tentar encapsular "all" operações que operam em caminhos de arquivos. Maiúscula e minúscula, o PathSeparator,o DirectorySeparatorChar, etc, estão todas em questão. Mas sutilmente inclui oque é um caminho absoluto: /bin é absoluto no Linux mas precisa de um drive para fazer com que fique absoluto no Windows.
+2. Para classes que manipulam caminhos, são uteis para usar a injeção de dependência para a plataforma, ao invés de ter que detecta-los. Dessa maneira, você pode testar cada plataforma sob apenas uma.
+3. Para alguns testes, você pode usar caminhos como /a/b/c que trabalham em ambas as plataformas, mas cuidado: Métodos como Path.GetAbsolutePath() irão ter comportamento diferente em cada plataforma.
 
 Nomes absolutos de caminhos
 -------------------
